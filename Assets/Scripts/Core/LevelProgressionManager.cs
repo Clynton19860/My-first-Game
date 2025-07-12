@@ -123,6 +123,12 @@ public class LevelProgressionManager : MonoBehaviour
     /// </summary>
     private void ApplyLevelSettings()
     {
+        if (currentLevelData == null)
+        {
+            Debug.LogWarning("LevelProgressionManager: currentLevelData is null, skipping level settings");
+            return;
+        }
+        
         if (levelGenerator != null)
         {
             // Apply level settings to level generator

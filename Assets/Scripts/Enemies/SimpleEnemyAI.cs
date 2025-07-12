@@ -70,6 +70,12 @@ public class SimpleEnemyAI : MonoBehaviour
             health.OnDeath.AddListener(OnDeath);
             health.OnHealthChanged.AddListener(OnHealthChanged);
         }
+        else
+        {
+            Debug.LogWarning($"SimpleEnemyAI: Health component not found on {gameObject.name}. Adding one.");
+            health = gameObject.AddComponent<Health>();
+            health.SetMaxHealth(100);
+        }
     }
     
     private void Start()

@@ -63,6 +63,12 @@ public class EnemyTypeManager : MonoBehaviour
     /// </summary>
     private void InitializeEnemyTypes()
     {
+        // Initialize enemyTypes array if it's null
+        if (enemyTypes == null)
+        {
+            enemyTypes = new EnemyTypeData[0];
+        }
+        
         // Create dictionary for quick lookup
         foreach (EnemyTypeData enemyType in enemyTypes)
         {
