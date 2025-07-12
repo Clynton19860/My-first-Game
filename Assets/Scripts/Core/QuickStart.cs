@@ -12,7 +12,7 @@ public class QuickStart : MonoBehaviour
     
     [Header("Player Settings")]
     [SerializeField] private float playerHeight = 2f;
-    [SerializeField] private float groundSize = 20f;
+    // [SerializeField] private float groundSize = 20f; // Unused - removed to avoid warning
     
     private void Start()
     {

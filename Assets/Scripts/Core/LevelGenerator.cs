@@ -16,7 +16,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private GameObject coverPrefab;
     [SerializeField] private float minCoverHeight = 1f;
     [SerializeField] private float maxCoverHeight = 2f;
-    [SerializeField] private float coverSpacing = 8f;
+    // [SerializeField] private float coverSpacing = 8f; // Unused - removed to avoid warning
     
     [Header("Obstacle Settings")]
     [SerializeField] private GameObject[] obstaclePrefabs;

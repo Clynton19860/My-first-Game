@@ -31,11 +31,11 @@ A first-person shooter game built with Unity, featuring basic movement, shooting
 - [x] Basic enemy spawning
 
 ### **Phase 2: Core Gameplay (Week 3-4)**
-- [ ] Advanced weapon systems (reload, different weapons)
-- [ ] Enemy AI and behavior
-- [ ] Health and damage systems
-- [ ] Combat mechanics and feedback
-- [ ] Score and progression systems
+- [x] Advanced weapon systems (reload, different weapons) ✅
+- [x] Enemy AI and behavior ✅
+- [x] Health and damage systems ✅
+- [x] Combat mechanics and feedback ✅
+- [x] Score and progression systems ✅
 
 ### **Phase 3: Graphics & Polish (Week 5-6)**
 - [ ] Better materials and lighting

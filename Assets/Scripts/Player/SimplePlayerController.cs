@@ -16,7 +16,7 @@ public class SimplePlayerController : MonoBehaviour
     
     [Header("Advanced Movement")]
     [SerializeField] private float acceleration = 10f;
-    [SerializeField] private float deceleration = 15f;
+    // [SerializeField] private float deceleration = 15f; // Unused - removed to avoid warning
     [SerializeField] private float airControl = 0.3f;
     [SerializeField] private float slideSpeed = 10f;
     [SerializeField] private float slideDuration = 1f;
