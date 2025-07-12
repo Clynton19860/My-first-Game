@@ -1,42 +1,55 @@
-# 🎮 Elite Shooter Game
+# 🎮 Unity FPS Game Project
 
 ## **Project Overview**
-A high-fidelity first-person shooter game built with Unity HDRP, featuring realistic graphics, advanced AI, and immersive gameplay.
+A first-person shooter game built with Unity, featuring basic movement, shooting mechanics, and a procedurally generated arena. This is a learning project for Unity development.
 
-## **Features**
-- 🎯 Realistic weapon mechanics and ballistics
-- 🤖 Advanced enemy AI with behavior trees
-- 🌟 High Definition Render Pipeline (HDRP) graphics
-- 🔊 Immersive audio with spatial sound
-- 💥 Dynamic particle effects and destruction
-- 🎨 Professional UI/UX design
-- 🎮 Multiplayer-ready architecture
+## **Current Status**
+- ✅ Basic Unity project setup completed
+- ✅ Core scripts imported and working
+- ✅ Player movement and camera controls implemented
+- ✅ Basic weapon system with projectiles
+- ✅ Procedural level generation with arena, cover, and obstacles
+- ✅ Simple enemy spawning system
+- ✅ Basic UI framework
+
+## **Features (Currently Implemented)**
+- 🎯 Basic weapon mechanics with projectiles
+- 🏃 Player movement (WASD) and mouse look
+- 🎮 Simple arena generation with cover and obstacles
+- 👾 Basic enemy spawning system
+- 🎨 Simple UI framework
+- 🔧 Modular script architecture
 
 ## **Development Roadmap**
 
 ### **Phase 1: Foundation (Week 1-2)**
-- [x] Unity HDRP project setup
+- [x] Unity project setup
 - [x] Core game architecture
 - [x] Player movement and camera systems
 - [x] Basic weapon framework
+- [x] Simple level generation
+- [x] Basic enemy spawning
 
 ### **Phase 2: Core Gameplay (Week 3-4)**
-- [ ] Advanced weapon systems
-- [ ] Enemy AI and spawning
-- [ ] Level design and environments
-- [ ] Combat mechanics
+- [ ] Advanced weapon systems (reload, different weapons)
+- [ ] Enemy AI and behavior
+- [ ] Health and damage systems
+- [ ] Combat mechanics and feedback
+- [ ] Score and progression systems
 
 ### **Phase 3: Graphics & Polish (Week 5-6)**
-- [ ] Advanced materials and lighting
-- [ ] Particle effects and animations
+- [ ] Better materials and lighting
+- [ ] Particle effects for shooting and impacts
 - [ ] UI and HUD systems
+- [ ] Sound effects and audio
 - [ ] Performance optimization
 
-### **Phase 4: Audio & Testing (Week 7-8)**
-- [ ] Sound design and music
-- [ ] Playtesting and balancing
+### **Phase 4: Advanced Features (Week 7-8)**
+- [ ] Multiple enemy types
+- [ ] Power-ups and collectibles
+- [ ] Level variety and progression
+- [ ] Menu systems
 - [ ] Build and deployment
-- [ ] Documentation completion
 
 ## **Project Structure**
 ```
@@ -45,15 +58,22 @@ game/
 ├── Assets/                   # Unity assets folder
 │   ├── Scripts/             # C# scripts
 │   │   ├── Core/           # Core game systems
+│   │   │   ├── GameManager.cs
+│   │   │   ├── Health.cs
+│   │   │   ├── LevelGenerator.cs
+│   │   │   ├── PackageInstaller.cs
+│   │   │   └── QuickStart.cs
 │   │   ├── Player/         # Player-related scripts
+│   │   │   └── SimplePlayerController.cs
 │   │   ├── Weapons/        # Weapon systems
+│   │   │   ├── Projectile.cs
+│   │   │   └── SimpleWeaponController.cs
 │   │   ├── Enemies/        # Enemy AI
+│   │   │   ├── Enemy.cs
+│   │   │   └── EnemySpawner.cs
 │   │   └── UI/             # User interface
-│   ├── Materials/          # Graphics materials
-│   ├── Models/             # 3D models
-│   ├── Textures/           # Textures and sprites
-│   ├── Audio/              # Sound effects and music
-│   └── Scenes/             # Game scenes
+│   │       └── SimpleGameUI.cs
+│   └── My first scene.unity # Main game scene
 ├── ProjectSettings/         # Unity project settings
 └── Packages/               # Unity packages
 ```
@@ -67,27 +87,23 @@ game/
 
 ### **Installation Steps**
 1. Download Unity Hub from [unity.com](https://unity.com)
-2. Install Unity 2023.2 LTS with HDRP template
+2. Install Unity 2023.2 LTS
 3. Clone this repository
 4. Open the project in Unity
-5. Install required packages (see PackageManager.md)
+5. The project uses simplified scripts that don't require additional packages
 
 ### **First Run**
 1. Open the project in Unity
-2. Navigate to `Assets/Scenes/MainMenu.unity`
-3. Press Play to test the game
-4. Use WASD to move, Mouse to look, Left Click to shoot
+2. Open the "My first scene" scene
+3. Add a QuickStart component to any GameObject in the scene
+4. Press Play to generate the arena and start the game
+5. Use WASD to move, Mouse to look, Left Click to shoot
 
 ## **Controls**
 - **WASD** - Movement
 - **Mouse** - Look around
 - **Left Click** - Shoot
-- **Right Click** - Aim down sights
-- **R** - Reload
-- **Space** - Jump
-- **Shift** - Sprint
-- **E** - Interact
-- **Tab** - Pause menu
+- **Space** - Jump (if implemented)
 
 ## **Development Guidelines**
 
@@ -97,17 +113,25 @@ game/
 - Add XML documentation for public methods
 - Follow Unity naming conventions
 
-### **Performance Targets**
-- 60 FPS minimum on recommended hardware
-- 30 FPS minimum on minimum hardware
-- < 100ms frame time for AI updates
-- < 50ms frame time for physics
+### **Current Scripts Overview**
+- **QuickStart.cs**: Main entry point that generates the arena and sets up the game
+- **SimplePlayerController.cs**: Handles player movement and camera controls
+- **SimpleWeaponController.cs**: Basic shooting mechanics with projectiles
+- **LevelGenerator.cs**: Creates the arena with cover and obstacles
+- **EnemySpawner.cs**: Spawns basic enemies
+- **SimpleGameUI.cs**: Basic UI framework
 
-### **Graphics Settings**
-- HDRP with Forward+ rendering
-- Real-time global illumination
-- Screen space reflections
-- Volumetric fog and lighting
+## **Next Steps**
+1. **Add Health System**: Implement player and enemy health with damage
+2. **Improve Enemy AI**: Make enemies move and attack the player
+3. **Add UI Elements**: Health bar, ammo counter, score display
+4. **Sound Effects**: Add shooting sounds, footsteps, etc.
+5. **Visual Polish**: Better materials, lighting, and effects
+
+## **Troubleshooting**
+- **Objects disappear after Play mode**: This is normal - runtime-generated objects only exist during Play mode
+- **Missing packages**: This project uses simplified scripts that don't require additional Unity packages
+- **Script errors**: Make sure all scripts are properly attached to GameObjects in the scene
 
 ## **Contributing**
 1. Create a feature branch
