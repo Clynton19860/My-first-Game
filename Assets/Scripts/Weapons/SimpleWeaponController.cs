@@ -81,6 +81,7 @@ public class SimpleWeaponController : MonoBehaviour
     public bool IsReloading => isReloading;
     public bool IsAiming => isAiming;
     public bool CanShoot => !isReloading && currentAmmo > 0 && Time.time >= lastShootTime + fireRate;
+    public int MagazineSize => magazineSize;
     
     private void Awake()
     {
